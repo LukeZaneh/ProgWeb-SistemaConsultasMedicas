@@ -1,7 +1,7 @@
 
 # ProgWeb-SistemaConsultasMedicas
 
-![Sistema de Consultas Médicas](ProgWeb-SistemaConsultasMedicas/consultorio/staticfiles/logo-consultorio.png)
+![Sistema de Agendamento de Consultas Médicas](https://github.com/LukeZaneh/ProgWeb-SistemaConsultasMedicas/raw/main/static/logo-consultorio.png)
 
 ## Descrição
 
