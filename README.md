@@ -25,7 +25,6 @@ Este repositório é destinado ao trabalho de implementação da disciplina de P
 - Django
 - Python
 - HTML/CSS
-- JavaScript
 
 ## Pré-requisitos
 
@@ -71,7 +70,7 @@ Este repositório é destinado ao trabalho de implementação da disciplina de P
 7. **Acesse a aplicação:**
    Abra o navegador e vá para `http://127.0.0.1:8000/`
 
-## Contribuidores
+## Equipe
 
 - **Kleber Halley Sallum Guimarães**
 - **Izabelle Ramos Tomé**
