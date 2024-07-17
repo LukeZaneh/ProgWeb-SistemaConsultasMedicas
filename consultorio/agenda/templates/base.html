@@ -3,13 +3,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
+        <link rel="stylesheet" href="{% static 'mystyles.css' %}">
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}"> 
         <title>{% block titulo %}{% endblock %}</title>
     </head>
     <body>
         <div class="topnav">
             <a href="/">Principal</a> |
-            <a href="/marcaConsulta">Marcar Consulta</a> |
+            <a href="/marcarConsulta">Marcar Consulta</a> |
             <a href="/consultas">Consultas</a> |
             <a href="/auth/login">Login</a> |
             <a href="/auth/cadastro">Cadastre-se</a>

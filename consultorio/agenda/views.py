@@ -1,12 +1,11 @@
 from django.http import HttpResponse
 from django.template import loader
-from .models import marcarConsulta
 
 def principal(request):
     template = loader.get_template('principal.html')
     return HttpResponse(template.render())
 
-def marcarConsulta(request):
+def marcar_consulta(request):  # Renomeie a função para evitar conflito
     template = loader.get_template('marcarConsulta.html')
     context = {
         'marcarConsulta': [
@@ -108,44 +107,45 @@ def consultas(request):
 def consulta_detalhes(request, id): 
     consultas = [
         {
-                "id": 1,
-                "medico": "Júlia Caldas",
-                "dia": "05 de janeiro de 2023",
-                "horario": "08:00",
-                "plano": "Unimed"
-            },
-            {
-                "id": 2,
-                "medico": "Júlia Caldas",
-                "dia": "05 de julho de 2023",
-                "horario": "08:30",
-                "plano": "Unimed"
-            },
-            {
-                "id": 3,
-                "medico": "Júlia Caldas",
-                "dia": "08 de outubro de 2023",
-                "horario": "13:00",
-                "plano": "Unimed"
-            },
-            {
-                "id": 4,
-                "medico": "Ricardo Silvano",
-                "dia": "15 de maio de 2024",
-                "horario": "15:00",
-                "plano": "Unimed"
-            },
-            {
-                "id": 5,
-                "medico": "Alessandra Nunes",
-                "dia": "01 de julho de 2024",
-                "horario": "17:30",
-                "plano": "Particular"
-            }
+            "id": 1,
+            "medico": "Júlia Caldas",
+            "dia": "05 de janeiro de 2023",
+            "horario": "08:00",
+            "plano": "Unimed"
+        },
+        {
+            "id": 2,
+            "medico": "Júlia Caldas",
+            "dia": "05 de julho de 2023",
+            "horario": "08:30",
+            "plano": "Unimed"
+        },
+        {
+            "id": 3,
+            "medico": "Júlia Caldas",
+            "dia": "08 de outubro de 2023",
+            "horario": "13:00",
+            "plano": "Unimed"
+        },
+        {
+            "id": 4,
+            "medico": "Ricardo Silvano",
+            "dia": "15 de maio de 2024",
+            "horario": "15:00",
+            "plano": "Unimed"
+        },
+        {
+            "id": 5,
+            "medico": "Alessandra Nunes",
+            "dia": "01 de julho de 2024",
+            "horario": "17:30",
+            "plano": "Particular"
+        }
     ]
     consulta = consultas[id-1]
-    template = loader.get_template('consulta_detalhes.html')
+    template = loader.get_template('detalhesConsulta.html')
     context = {
         'consulta': consulta,
     }
     return HttpResponse(template.render(context, request))
+

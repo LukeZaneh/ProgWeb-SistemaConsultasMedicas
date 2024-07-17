@@ -9,7 +9,10 @@
         <h1>Consultas</h1>
         <ul>
             {% for dadosConsulta in consultas %}
-            <li onclick="window.location = 'consultas/detalhes/{{ consulta.id }}'"><em>Médico:</em> {{ consulta.medico }} <br> <em>Data:</em> {{ consulta.data }} </li>
+            <li onclick="window.location = '/detalhesConsulta/{{ dadosConsulta.id }}'">
+                <em>Médico:</em> {{ dadosConsulta.medico }} <br>
+                <em>ID:</em> {{ dadosConsulta.id }} 
+            </li>
             {% endfor %}
         </ul>
     </div>
