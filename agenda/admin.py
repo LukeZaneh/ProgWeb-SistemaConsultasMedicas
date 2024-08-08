@@ -13,5 +13,6 @@ class consultaAdm(admin.ModelAdmin):
         if db_field.name == "paciente":
             kwargs["required"] = False
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
+    
 
 admin.site.register(Data, consultaAdm)
