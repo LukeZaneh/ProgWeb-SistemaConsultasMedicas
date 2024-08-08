@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
+        <title>Consultorio - Administrador</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="/home">Home</a> |
+            <a href="/app/consultas">Agendar Consulta</a> |
+            <a href="/app/administrador">Admin</a> |
+            <a href="/auth/login">Login</a> |
+            <a href="/auth/cadastro">Cadastro</a>
+        </div>
+        <div class="mycard">
+            <h1>Administrador</h1>
+            <h2>Datas</h2>
+            <ul>
+                {% for d in data %}
+                <li onclick="window.location = 'data/{{ dia.id }}'">{{ dia.data }} | 
+                    {% if d.disponibilidade %}
+                        Disponivel
+                    {% else %}
+                        Não disponivel
+                    {% endif %}
+                    | R${{ d.preco }} </li>
+                {% endfor %} <br>
+                <button onclick="window.location = 'data/criar'">Criar data de consulta</button>
+            </ul>
+            <h2>Informações</h2>
+            <ul>
+                {% for des in descricoes %}
+                <li onclick="window.location = 'consulta/{{ consulta.id }}'">{{ consulta.paciente }}</li>
+                {% endfor %} <br>
+                <button onclick="window.location = 'descricao/criar'">Criar descrição</button>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -72,6 +72,5 @@ Este repositório é destinado ao trabalho de implementação da disciplina de P
 
 ## Equipe
 
-- **Kleber Halley Sallum Guimarães**
 - **Izabelle Ramos Tomé**
 - **Lucas Carvalho**
